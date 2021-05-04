@@ -1,7 +1,11 @@
 import React from 'react';
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather () {
+const apiKey="a8b18d5e574b14c1d3de44331ec7e970";
+let city="Vienna";
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 return (
 <div className="Weather"> 
 
