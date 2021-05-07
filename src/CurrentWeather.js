@@ -15,7 +15,7 @@ export default function CurrentWeather(props) {
     <div className="col-6">
     <div className="clearfix">
         <img src={props.data.iconUrl} 
-        alt="cloudy"
+        alt={props.data.description}
         className="float-left" />
     <span className="temperature">{Math.round(props.data.temperature)}</span> 
     <span className="unit">°C</span>
