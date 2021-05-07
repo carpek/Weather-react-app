@@ -13,7 +13,7 @@ function handleResponse(response) {
 ready: true,
 temperature: response.data.main.temp,
 humidity: response.data.main.humidity,
-wind: response.data.main.wind.speed,
+wind: response.data.wind.speed,
 date: new Date (response.data.dt * 1000),
 city: response.data.name,
 description: response.data.weather[0].description,
