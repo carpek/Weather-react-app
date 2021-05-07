@@ -17,7 +17,7 @@ wind: response.data.main.wind.speed,
 date: new Date (response.data.dt * 1000),
 city: response.data.name,
 description: Cloudy,
-iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
+iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   
 }
