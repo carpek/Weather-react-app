@@ -11,7 +11,7 @@ export default function App() {
 <Weather defaultCity="Vienna"/>
 
 <footer>This weather app was codes by
-<a href="https://github.com/carpek/Weather-react-app" target="_blank">  Lina Pek </a>
+<a href="https://github.com/carpek/Weather-react-app" >  Lina Pek </a>
 and is open sourced.</footer>
     </div>
     </div>
