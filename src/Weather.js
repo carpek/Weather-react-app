@@ -6,6 +6,7 @@ import CurrentWeather from './CurrentWeather';
 export default function Weather (props) {
 const [ready, setReady] = useState(false);
 const [weatherData, setWeatherData] = useState({ ready: false});
+const [city, setCity] = useState(props.defaultCity);
 
 function handleResponse(response) {
     setWeatherData({
@@ -21,9 +22,21 @@ iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
   
 }
 
+function search() {
+    const apiKey="a8b18d5e574b14c1d3de44331ec7e970";
+
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+
+}
+
 function handleSubmit(event) {
 event.preventDefault();
-//seach for city
+search();
+}
+
+function handleCity(event){
+ setCity(event.target.value);  
 
 }
 
@@ -38,6 +51,7 @@ if (weatherData.ready) {
             type="search" 
             placeholder="Type a city" 
             autoFocus="on"
+            onChange={handleCity}
             className="form-control"/>
             </div>
            
@@ -57,10 +71,8 @@ if (weatherData.ready) {
 }
 
 else {
-const apiKey="a8b18d5e574b14c1d3de44331ec7e970";
-
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(handleResponse);
+search();
+return "Loading...";
 }
 
 }
