@@ -29,7 +29,7 @@ setUnit("celcius");
     return ( 
         <div className="WeatherTemperature">
         <span className="temperature">
-            {Math.round(props.fahrenheit)}
+            {Math.round(fahrenheit)}
             </span> 
         <span className="unit"> <a href="/" onClick={convertToCelcius}>°C</a> | 
          F</span>

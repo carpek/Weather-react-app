@@ -4,7 +4,7 @@ import "./Weather.css";
 import CurrentWeather from './CurrentWeather';
 
 export default function Weather (props) {
-const [ready, setReady] = useState(false);
+
 const [weatherData, setWeatherData] = useState({ ready: false});
 const [city, setCity] = useState(props.defaultCity);
 
