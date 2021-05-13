@@ -31,7 +31,7 @@ if (loaded) {
             <ForecastDay data={dailyForecast} /> 
             </div>
             );
-        }
+        } else {return null;}
         })}
         
 </div>
