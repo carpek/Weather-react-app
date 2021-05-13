@@ -1,0 +1,9 @@
+.ForecastDaily {
+text-align: center;
+
+}
+
+.ForecastDaily-temp-min {
+font-weight: lighter;
+margin-left: 5px; 
+}
