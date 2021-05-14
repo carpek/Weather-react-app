@@ -19,7 +19,7 @@ wind: response.data.wind.speed,
 date: new Date (response.data.dt * 1000),
 city: response.data.name,
 description: response.data.weather[0].description,
-iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
     });
   
 }
@@ -66,6 +66,13 @@ if (weatherData.ready) {
         </form>
         <div>
             <CurrentWeather data={weatherData} />
+<div>
+            <img
+                      src={weatherData.iconUrl}
+                      alt="weather condition icon"
+                      className="float-left"
+                    />
+</div>
             <ForecastDaily coordinates={weatherData.coordinates}/>
         </div>
         </div>

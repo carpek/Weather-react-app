@@ -15,10 +15,9 @@ export default function CurrentWeather(props) {
     <div className="row mt-3">
     <div className="col-6">
     <div className="clearfix">
-        <img src={props.data.iconUrl} 
-        alt={props.data.description}
-        className="float-left"
-        size={48} />
+        <div className="float-left">
+        
+      
         <WeatherTemperature celcius={Math.round(props.data.temperature)}/>
 
     
@@ -38,6 +37,6 @@ export default function CurrentWeather(props) {
     </div>
     </div>
     </div>
-
+    </div>
     );
 }
