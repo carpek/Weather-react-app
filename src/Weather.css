@@ -1,16 +1,16 @@
 body {
     background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+   
 }
 
 .Weather {
     background-color: white;
-border: 1px solid #3f3697;
+border: 1px solid  #ADC4FC;
 border-radius: 5px;
 padding: 16px;
 margin: 30px auto;
-
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 
 .Weather form {

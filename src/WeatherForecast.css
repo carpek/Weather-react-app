@@ -7,3 +7,12 @@ text-align: center;
 font-weight: lighter;
 margin-left: 5px; 
 }
+
+.ForecastDaily {
+border: 1px solid;
+border-radius: 5px;
+border-color: #ADC4FC;
+margin-top: 25px;
+padding: 2px;
+
+}
