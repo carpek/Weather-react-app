@@ -41,11 +41,12 @@ function handleCity(event){
  setCity(event.target.value);  
 
 }
+// search form
 
 if (weatherData.ready) {
     return (
         <div className="Weather"> 
-        
+   
         <form onSubmit={handleSubmit}>
         <div className="row">
         <div className="col-9">
@@ -64,17 +65,12 @@ if (weatherData.ready) {
             </div>
             </div>
         </form>
-        <div>
+        
+
             <CurrentWeather data={weatherData} />
-<div>
-            <img
-                      src={weatherData.iconUrl}
-                      alt="weather condition icon"
-                      className="float-left"
-                    />
-</div>
+           
             <ForecastDaily coordinates={weatherData.coordinates}/>
-        </div>
+        
         </div>
       )
 

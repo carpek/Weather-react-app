@@ -15,6 +15,7 @@ setUnit("celcius");
   
   if (unit === "celcius") {
     return ( 
+      
         <div className="WeatherTemperature">
         <span className="temperature">
             {Math.round(props.celcius)}
